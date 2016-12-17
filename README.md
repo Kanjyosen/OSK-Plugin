@@ -1,2 +1,2 @@
-# OSK-Plugin
-環状線がいろいろやってるSpigot向けプラグイン、OSK-Pluginのgithubページです。
+# ZRSK-Plugin
+環状線がいろいろやってるSpigot/Bukitt向けプラグイン、ZRSK-Pluginのgithubページです。
