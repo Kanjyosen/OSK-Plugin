@@ -1,0 +1,13 @@
+name: ZRSKPluginDSK
+main: jp.dip.osakanjyo.Main
+version: 1.1.0
+commands:
+   zrsk:
+   zrsk-version:
+   zrsk-stuffs:
+   server-help:
+   server-games:
+   zrsk-help:
+   zrsk-time:
+   server-trains:
+
