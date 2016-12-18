@@ -15,6 +15,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.block.BlockIgniteEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -80,7 +81,7 @@ public class Main extends JavaPlugin implements Listener {
 			
 			//ここから下にコマンド用の文を追加
 		} else if (label.equalsIgnoreCase("zrsk-version")) {
-			sender.sendMessage(ChatColor.AQUA + "ZRSK-Plugin Powered by Densyakun v-Alpha0.1(2016/12/17's update)(Densyakun-Life Server custom edition)");
+			sender.sendMessage(ChatColor.AQUA + "ZRSK-Plugin Powered by Densyakun v-Beta2.0(2016/12/19's update)(Densyakun-Life Server custom edition)");
 		} else if (label.equalsIgnoreCase("zrsk-stuffs")) {
 			sender.sendMessage(ChatColor.AQUA + "企画・細工：環状線(blog: http://kmskmp.hateblo.jp 大改造・大体の開発：電車君 twitter: https://twitter.com/Densyakun )");
 		} else if (label.equalsIgnoreCase("zrsk-help")) {
@@ -127,10 +128,19 @@ public class Main extends JavaPlugin implements Listener {
 	public void BlockPlace(BlockPlaceEvent e) {
 		if (e.getBlock().getType() == Material.TNT) {
 			e.getBlock().setType(Material.DIRT);
-			e.getPlayer().sendMessage("[OSK-Plugin]TNTの設置は禁じられています。罰金20000円を徴収したうえで、設置したTNTを土に変えました。");
+			e.getPlayer().sendMessage("[ZRSK-Plugin]TNTの設置は禁じられています。罰金20000円を徴収したうえで、設置したTNTを土に変えました。");
 			String player = e.getPlayer().getName();
 			EconomyResponse r = econ.withdrawPlayer(player, 20000);
 			System.out.println("[警告][WARN]" + player + "によるTNTの設置を阻止しました。");
+		}
+	@SuppressWarnings("deprecation")
+	@EventHandler
+	public void onEvent(BlockIgniteEvent e) {
+			e.getBlock().setType(Material.DIRT);
+			e.getPlayer().sendMessage("[ZRSK-Plugin]着火行為は禁じられています。罰金25000円を徴収したうえで、火を土に変えました。");
+			String player = e.getPlayer().getName();
+			EconomyResponse r = econ.withdrawPlayer(player, 20000);
+			System.out.println("[警告][WARN]" + player + "による着火行為を阻止しました。");
 		}
 	}
 //	@EventHandler
