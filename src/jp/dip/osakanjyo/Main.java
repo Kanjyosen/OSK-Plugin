@@ -9,6 +9,7 @@ import net.milkbowl.vault.economy.EconomyResponse;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -115,6 +116,8 @@ public class Main extends JavaPlugin implements Listener {
 		} else if (label.equalsIgnoreCase("zrsk-time")) {
 			Date date = new Date();
 			sender.sendMessage(ChatColor.GREEN + "本日は⇒" + new SimpleDateFormat("yyyy.MM.dd").format(date) + "ただ今の時刻⇒" + new SimpleDateFormat("kk,mm").format(date));
+			Player player = getServer().getPlayer(getName());
+			player.getWorld().playSound(player.getLocation(),Sound.EAT,1,1);
 			//テンプレ
 		//} else if (label.equalsIgnoreCase("コマンド")) {
 			//(処理)
@@ -133,15 +136,15 @@ public class Main extends JavaPlugin implements Listener {
 			EconomyResponse r = econ.withdrawPlayer(player, 20000);
 			System.out.println("[警告][WARN]" + player + "によるTNTの設置を阻止しました。");
 		}
-	@SuppressWarnings("deprecation")
-	@EventHandler
-	public void onEvent(BlockIgniteEvent e) {
-			e.getBlock().setType(Material.DIRT);
-			e.getPlayer().sendMessage("[ZRSK-Plugin]着火行為は禁じられています。罰金25000円を徴収したうえで、火を土に変えました。");
-			String player = e.getPlayer().getName();
-			EconomyResponse r = econ.withdrawPlayer(player, 20000);
-			System.out.println("[警告][WARN]" + player + "による着火行為を阻止しました。");
-		}
+//	@SuppressWarnings("deprecation")
+//	@EventHandler
+//	public void onEvent(BlockIgniteEvent e) {
+//			e.getBlock().setType(Material.DIRT);
+//			e.getPlayer().sendMessage("[ZRSK-Plugin]着火行為は禁じられています。罰金25000円を徴収したうえで、火を土に変えました。");
+//			String player = e.getPlayer().getName();
+//			EconomyResponse r = econ.withdrawPlayer(player, 20000);
+//			System.out.println("[警告][WARN]" + player + "による着火行為を阻止しました。");
+//		}
 	}
 //	@EventHandler
 	//	public void PlayerInteract(PlayerInteractEvent e) {
