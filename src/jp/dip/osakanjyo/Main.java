@@ -34,12 +34,12 @@ public class Main extends JavaPlugin implements Listener {
 	@Override
 	public void onEnable() {
 		if(!setupEconomy()) {
-			getLogger().warning("Vault‚ª“±“ü‚³‚ê‚Ä‚¢‚Ü‚¹‚ñBZRSK-Plugin‚Í–³Œø‰»‚³‚ê‚Ü‚·B");
+			getLogger().warning("VaultãŒå°å…¥ã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚ZRSK-Pluginã¯ç„¡åŠ¹åŒ–ã•ã‚Œã¾ã™ã€‚");
 			getServer().getPluginManager().disablePlugin(this);
 			return;
 		}
 	
-		System.out.println("[ZRSK-Plugin]ƒvƒ‰ƒOƒCƒ“‚ª‹N“®‚µ‚Ü‚µ‚½B");
+		System.out.println("[ZRSK-Plugin]ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ãŒèµ·å‹•ã—ã¾ã—ãŸã€‚");
 		getServer().getPluginManager().registerEvents(this, this);
 	}
 	
@@ -57,7 +57,7 @@ public class Main extends JavaPlugin implements Listener {
 
 	@Override
 	public void onDisable() {
-		System.out.println("[ZRSK-Plugin]ƒvƒ‰ƒOƒCƒ“‚ª’â~‚µ‚Ü‚µ‚½");
+		System.out.println("[ZRSK-Plugin]ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ãŒåœæ­¢ã—ã¾ã—ãŸ");
 	}
 	
 	@Override
@@ -65,60 +65,60 @@ public class Main extends JavaPlugin implements Listener {
 			String label, String[] args) {
 		if (label.equalsIgnoreCase("zrsk")) {
 			count++;
-			System.out.println("[ZRSK-Plugin]ƒeƒXƒgƒRƒ}ƒ“ƒh‚ªÀs‚³‚ê‚Ü‚µ‚½: " + count);
+			System.out.println("[ZRSK-Plugin]ãƒ†ã‚¹ãƒˆã‚³ãƒãƒ³ãƒ‰ãŒå®Ÿè¡Œã•ã‚Œã¾ã—ãŸ: " + count);
 			//} else if (label.equalsIgnoreCase("skyhi")) {
 			//if (args.length == 0) {
-				//sender.sendMessage(ChatColor.RED + "[OSK-Plugin]ƒpƒ‰ƒ[ƒ^[‚ª‘«‚è‚Ü‚¹‚ñ");
+				//sender.sendMessage(ChatColor.RED + "[OSK-Plugin]ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼ãŒè¶³ã‚Šã¾ã›ã‚“");
 				//} else {
 				//Player target = getServer().getPlayer(args[0]);
 				//if (target == null) {
-					//sender.sendMessage(ChatColor.RED + "[OSK-Plugin]ƒvƒŒƒCƒ„[‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ");
+					//sender.sendMessage(ChatColor.RED + "[OSK-Plugin]ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“");
 					//				} else {
 					//skyhi(target);
-					//					sender.sendMessage(ChatColor.AQUA + "[OSK-Plugin]ƒvƒŒƒCƒ„[\"" + target.getDisplayName() + ChatColor.AQUA + "\"‚ğƒXƒJƒCƒnƒC‚µ‚Ü‚µ‚½");
+					//					sender.sendMessage(ChatColor.AQUA + "[OSK-Plugin]ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼\"" + target.getDisplayName() + ChatColor.AQUA + "\"ã‚’ã‚¹ã‚«ã‚¤ãƒã‚¤ã—ã¾ã—ãŸ");
 //				}
 //			}
 			
-			//‚±‚±‚©‚ç‰º‚ÉƒRƒ}ƒ“ƒh—p‚Ì•¶‚ğ’Ç‰Á
+			//ã“ã“ã‹ã‚‰ä¸‹ã«ã‚³ãƒãƒ³ãƒ‰ç”¨ã®æ–‡ã‚’è¿½åŠ 
 		} else if (label.equalsIgnoreCase("zrsk-version")) {
 			sender.sendMessage(ChatColor.AQUA + "ZRSK-Plugin Powered by Densyakun v-Beta2.0(2016/12/19's update)(Densyakun-Life Server custom edition)");
 		} else if (label.equalsIgnoreCase("zrsk-stuffs")) {
-			sender.sendMessage(ChatColor.AQUA + "Šé‰æE×HFŠÂóü(blog: http://kmskmp.hateblo.jp ‘å‰ü‘¢E‘å‘Ì‚ÌŠJ”­F“dÔŒN twitter: https://twitter.com/Densyakun )");
+			sender.sendMessage(ChatColor.AQUA + "ä¼ç”»ãƒ»ç´°å·¥ï¼šç’°çŠ¶ç·š(blog: http://kmskmp.hateblo.jp å¤§æ”¹é€ ãƒ»å¤§ä½“ã®é–‹ç™ºï¼šé›»è»Šå› twitter: https://twitter.com/Densyakun )");
 		} else if (label.equalsIgnoreCase("zrsk-help")) {
-			sender.sendMessage(ChatColor.AQUA + "/zrsk-stuffs ZRSK-Plugin§ìw‚Ì–¼‘O“™‚ğ•\¦‚µ‚Ü‚· /zrsk-version Œ»İ“±“ü‚³‚ê‚Ä‚¢‚éZRSK-Plugin‚Ìƒo[ƒWƒ‡ƒ““™‚ğ•\¦‚µ‚Ü‚· /server-help ƒT[ƒo[‚É‚Â‚¢‚Ä /server-trains@<‰w–¼> ƒpƒ‰ƒ[ƒ^‚É“ü—Í‚³‚ê‚½”Ô†‚Ì‰w‚Å‰^s‚µ‚Ä‚¢‚é“S“¹‚ğ•\¦‚µ‚Ü‚·B‘åXü‚Ì•Xì“ì`‘åXŒö‰€ŠÔ‚É‚Ì‚İ‘Î‰‚µ‚Ä‚¢‚Ü‚·B");
+			sender.sendMessage(ChatColor.AQUA + "/zrsk-stuffs ZRSK-Pluginåˆ¶ä½œé™£ã®åå‰ç­‰ã‚’è¡¨ç¤ºã—ã¾ã™ /zrsk-version ç¾åœ¨å°å…¥ã•ã‚Œã¦ã„ã‚‹ZRSK-Pluginã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ç­‰ã‚’è¡¨ç¤ºã—ã¾ã™ /server-help ã‚µãƒ¼ãƒãƒ¼ã«ã¤ã„ã¦ /server-trainsã€€<é§…å> ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã«å…¥åŠ›ã•ã‚ŒãŸç•ªå·ã®é§…ã§é‹è¡Œã—ã¦ã„ã‚‹é‰„é“ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚å¤§æ£®ç·šã®æ°·å·å—ï½å¤§æ£®å…¬åœ’é–“ã«ã®ã¿å¯¾å¿œã—ã¦ã„ã¾ã™ã€‚");
 		} else if (label.equalsIgnoreCase("server-help")) {
-			sender.sendMessage(ChatColor.AQUA + "ƒT[ƒo[‚É‚Â‚¢‚Ä‚ÌÚ×‚ÍA http://densyakunserver.dip.jp ‚ğ‚²——‚­‚¾‚³‚¢B");
+			sender.sendMessage(ChatColor.AQUA + "ã‚µãƒ¼ãƒãƒ¼ã«ã¤ã„ã¦ã®è©³ç´°ã¯ã€ http://densyakunserver.dip.jp ã‚’ã”è¦§ãã ã•ã„ã€‚");
 		} else if (label.equalsIgnoreCase("server-trains")) {
 			if (args.length == 0) {
-				sender.sendMessage(ChatColor.RED + "[ZRSK-Plugin]ƒpƒ‰ƒ[ƒ^[‚ª‘«‚è‚Ü‚¹‚ñ");
-			} else if (args[0].equalsIgnoreCase("‘åXŒö‰€")) {
-				sender.sendMessage("‘åXŒö‰€‰w LR‘åXü:‘åXEV‚RE“Œ“‡•û–Ê ‚İ‚Ç‚è‚‘¬“S“¹ü:‚İ‚Ç‚ès‚«");
-			} else if (args[0].equalsIgnoreCase("‘åX")) {
-				sender.sendMessage("‘åX‰w LR‘åXü:V‚RE“Œ“‡•û–Ê/‘åXŒö‰€s LR’†‰›ü:’†‰›•û–Ês‚«/á”T“‡s‚«");
-			} else if (args[0].equalsIgnoreCase("V‚R")) {
-				sender.sendMessage("V‚R‰w LR‘åXü:“Œ“‡•û–Ê/‘åX•û–Ê áƒJƒJƒI“¤‚Ì–¼Y’nâ");
-			} else if (args[0].equalsIgnoreCase("’†ŒIR")) {
-				sender.sendMessage("’†ŒIR‰w LR‘åXü:“Œ“‡•û–Ê/‘åX•û–Ê");
-			} else if (args[0].equalsIgnoreCase("‰Î‚ÌR")) {
-				sender.sendMessage("‰Î‚ÌR‰w LR‘åXü:“Œ“‡•û–Ê/‘åX•û–Ê");
-			} else if (args[0].equalsIgnoreCase("»•l")) {
-				sender.sendMessage("»•l‰w LR‘åXü:“Œ“‡•û–Ê/‘åX•û–Ê »•l‹æÅŠñ‚è‰w");
-			} else if (args[0].equalsIgnoreCase("‘ù“‡")) {
-				sender.sendMessage("‘ù“‡‰w LR‘åXü:“Œ“‡•û–Ê/‘åX•û–Ê");
-			} else if (args[0].equalsIgnoreCase("“Œ“‡")) {
-				sender.sendMessage("“Œ“‡‰w LR‘åXü:“ì‰Z‘äs‚«/‘ù“‡•û–Ê ’n‰º“S“Œ“‡üŠe‰w’âÔ:ƒZƒ“ƒ^[‘O•û–Ê ’n‰º“S“Œ“‡ü‰õ‘¬“dÔ:•Xƒ–’r˜Hs‚«(’¼s) ’n‰º“S“ì–kü:–¾Îs‚«");
-			} else if (args[0].equalsIgnoreCase("•Xì“ì")) {
-				sender.sendMessage("•Xì“ì‰w LR‘åXü “ì‰Z‘äs‚«/‘ù“‡•û–Ê ’n‰º“S“Œ¼ü:“ì‰Z‘äs‚«/•Xƒ–’r˜H•û–Ê");
+				sender.sendMessage(ChatColor.RED + "[ZRSK-Plugin]ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼ãŒè¶³ã‚Šã¾ã›ã‚“");
+			} else if (args[0].equalsIgnoreCase("å¤§æ£®å…¬åœ’")) {
+				sender.sendMessage("å¤§æ£®å…¬åœ’é§… LRå¤§æ£®ç·š:å¤§æ£®ãƒ»æ–°é«˜å±±ãƒ»æ±å³¶æ–¹é¢ ã¿ã©ã‚Šé«˜é€Ÿé‰„é“ç·š:ã¿ã©ã‚Šè¡Œã");
+			} else if (args[0].equalsIgnoreCase("å¤§æ£®")) {
+				sender.sendMessage("å¤§æ£®é§… LRå¤§æ£®ç·š:æ–°é«˜å±±ãƒ»æ±å³¶æ–¹é¢/å¤§æ£®å…¬åœ’è¡Œ LRä¸­å¤®ç·š:ä¸­å¤®æ–¹é¢è¡Œã/é›ªä¹ƒå³¶è¡Œã");
+			} else if (args[0].equalsIgnoreCase("æ–°é«˜å±±")) {
+				sender.sendMessage("æ–°é«˜å±±é§… LRå¤§æ£®ç·š:æ±å³¶æ–¹é¢/å¤§æ£®æ–¹é¢ â‰ªã‚«ã‚«ã‚ªè±†ã®åç”£åœ°â‰«");
+			} else if (args[0].equalsIgnoreCase("ä¸­æ —å±±")) {
+				sender.sendMessage("ä¸­æ —å±±é§… LRå¤§æ£®ç·š:æ±å³¶æ–¹é¢/å¤§æ£®æ–¹é¢");
+			} else if (args[0].equalsIgnoreCase("ç«ã®å±±")) {
+				sender.sendMessage("ç«ã®å±±é§… LRå¤§æ£®ç·š:æ±å³¶æ–¹é¢/å¤§æ£®æ–¹é¢");
+			} else if (args[0].equalsIgnoreCase("ç ‚æµœ")) {
+				sender.sendMessage("ç ‚æµœé§… LRå¤§æ£®ç·š:æ±å³¶æ–¹é¢/å¤§æ£®æ–¹é¢ ç ‚æµœåŒºæœ€å¯„ã‚Šé§…");
+			} else if (args[0].equalsIgnoreCase("èŒ¸å³¶")) {
+				sender.sendMessage("èŒ¸å³¶é§… LRå¤§æ£®ç·š:æ±å³¶æ–¹é¢/å¤§æ£®æ–¹é¢");
+			} else if (args[0].equalsIgnoreCase("æ±å³¶")) {
+				sender.sendMessage("æ±å³¶é§… LRå¤§æ£®ç·š:å—ç“œå°è¡Œã/èŒ¸å³¶æ–¹é¢ åœ°ä¸‹é‰„æ±å³¶ç·šå„é§…åœè»Š:ã‚»ãƒ³ã‚¿ãƒ¼å‰æ–¹é¢ åœ°ä¸‹é‰„æ±å³¶ç·šå¿«é€Ÿé›»è»Š:æ°·ãƒ¶æ± è·¯è¡Œã(ç›´è¡Œ) åœ°ä¸‹é‰„å—åŒ—ç·š:æ˜çŸ³è¡Œã");
+			} else if (args[0].equalsIgnoreCase("æ°·å·å—")) {
+				sender.sendMessage("æ°·å·å—é§… LRå¤§æ£®ç·š å—ç“œå°è¡Œã/èŒ¸å³¶æ–¹é¢ åœ°ä¸‹é‰„æ±è¥¿ç·š:å—ç“œå°è¡Œã/æ°·ãƒ¶æ± è·¯æ–¹é¢");
 			} else {
-				sender.sendMessage("ƒf[ƒ^ƒx[ƒX‚Æ‰w–¼‚ªˆê’v‚µ‚Ü‚¹‚ñB–¢‘Î‰‚Å‚ ‚éê‡‚âA‰w–¼‚Ìu‰wv‚ğ“ü‚ê‚Ä‚µ‚Ü‚Á‚Ä‚¢‚éê‡‚ª‚ ‚è‚Ü‚·B”ñ‘Î‰‚Ìê‡‚ÍAŠÇ—Ò‚ğŒo—R‚µ‚ÄŠJ”­Ò‚Ü‚Å˜A—‚µ‚Ä‚­‚¾‚³‚¢B");
+				sender.sendMessage("ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã¨é§…åãŒä¸€è‡´ã—ã¾ã›ã‚“ã€‚æœªå¯¾å¿œã§ã‚ã‚‹å ´åˆã‚„ã€é§…åã®ã€Œé§…ã€ã‚’å…¥ã‚Œã¦ã—ã¾ã£ã¦ã„ã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚éå¯¾å¿œã®å ´åˆã¯ã€ç®¡ç†è€…ã‚’çµŒç”±ã—ã¦é–‹ç™ºè€…ã¾ã§é€£çµ¡ã—ã¦ãã ã•ã„ã€‚");
 			}
 		} else if (label.equalsIgnoreCase("zrsk-time")) {
 			Date date = new Date();
-			sender.sendMessage(ChatColor.GREEN + "–{“ú‚ÍË" + new SimpleDateFormat("yyyy.MM.dd").format(date) + "‚½‚¾¡‚ÌË" + new SimpleDateFormat("kk,mm").format(date));
-			//ƒeƒ“ƒvƒŒ
-		//} else if (label.equalsIgnoreCase("ƒRƒ}ƒ“ƒh")) {
-			//(ˆ—)
-			//‚±‚±‚©‚çã‚ÉƒRƒ}ƒ“ƒh—p‚Ì•¶‚ğ’Ç‰Á
+			sender.sendMessage(ChatColor.GREEN + "æœ¬æ—¥ã¯â‡’" + new SimpleDateFormat("yyyy.MM.dd").format(date) + "ãŸã ä»Šã®æ™‚åˆ»â‡’" + new SimpleDateFormat("kk,mm").format(date));
+			//ãƒ†ãƒ³ãƒ—ãƒ¬
+		//} else if (label.equalsIgnoreCase("ã‚³ãƒãƒ³ãƒ‰")) {
+			//(å‡¦ç†)
+			//ã“ã“ã‹ã‚‰ä¸Šã«ã‚³ãƒãƒ³ãƒ‰ç”¨ã®æ–‡ã‚’è¿½åŠ 
 		}
 		return true;
 	}
@@ -128,19 +128,19 @@ public class Main extends JavaPlugin implements Listener {
 	public void BlockPlace(BlockPlaceEvent e) {
 		if (e.getBlock().getType() == Material.TNT) {
 			e.getBlock().setType(Material.DIRT);
-			e.getPlayer().sendMessage("[ZRSK-Plugin]TNT‚Ìİ’u‚Í‹Ö‚¶‚ç‚ê‚Ä‚¢‚Ü‚·B”±‹à20000‰~‚ğ’¥û‚µ‚½‚¤‚¦‚ÅAİ’u‚µ‚½TNT‚ğ“y‚É•Ï‚¦‚Ü‚µ‚½B");
+			e.getPlayer().sendMessage("[ZRSK-Plugin]TNTã®è¨­ç½®ã¯ç¦ã˜ã‚‰ã‚Œã¦ã„ã¾ã™ã€‚ç½°é‡‘20000å††ã‚’å¾´åã—ãŸã†ãˆã§ã€è¨­ç½®ã—ãŸTNTã‚’åœŸã«å¤‰ãˆã¾ã—ãŸã€‚");
 			String player = e.getPlayer().getName();
 			EconomyResponse r = econ.withdrawPlayer(player, 20000);
-			System.out.println("[Œx][WARN]" + player + "‚É‚æ‚éTNT‚Ìİ’u‚ğ‘j~‚µ‚Ü‚µ‚½B");
+			System.out.println("[è­¦å‘Š][WARN]" + player + "ã«ã‚ˆã‚‹TNTã®è¨­ç½®ã‚’é˜»æ­¢ã—ã¾ã—ãŸã€‚");
 		}
 	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onEvent(BlockIgniteEvent e) {
 			e.getBlock().setType(Material.DIRT);
-			e.getPlayer().sendMessage("[ZRSK-Plugin]’…‰Îsˆ×‚Í‹Ö‚¶‚ç‚ê‚Ä‚¢‚Ü‚·B”±‹à25000‰~‚ğ’¥û‚µ‚½‚¤‚¦‚ÅA‰Î‚ğ“y‚É•Ï‚¦‚Ü‚µ‚½B");
+			e.getPlayer().sendMessage("[ZRSK-Plugin]ç€ç«è¡Œç‚ºã¯ç¦ã˜ã‚‰ã‚Œã¦ã„ã¾ã™ã€‚ç½°é‡‘25000å††ã‚’å¾´åã—ãŸã†ãˆã§ã€ç«ã‚’åœŸã«å¤‰ãˆã¾ã—ãŸã€‚");
 			String player = e.getPlayer().getName();
 			EconomyResponse r = econ.withdrawPlayer(player, 20000);
-			System.out.println("[Œx][WARN]" + player + "‚É‚æ‚é’…‰Îsˆ×‚ğ‘j~‚µ‚Ü‚µ‚½B");
+			System.out.println("[è­¦å‘Š][WARN]" + player + "ã«ã‚ˆã‚‹ç€ç«è¡Œç‚ºã‚’é˜»æ­¢ã—ã¾ã—ãŸã€‚");
 		}
 	}
 //	@EventHandler
